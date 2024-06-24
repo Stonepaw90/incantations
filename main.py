@@ -32,10 +32,10 @@ def intro():
     cols = st.columns([10,12])
     with cols[1]:
         write_text(
-          f"The banned letter is <span style='font-size: 60px; color: #3A96DD;'>{str.upper(st.session_state.BANK.banned)}</span> .",
+          f"Banned letter: <span style='font-size: 60px; color: #3A96DD;'>{str.upper(st.session_state.BANK.banned)}</span>",
           header_size=1)
     with cols[0]:
-        write_text(f"Your score is <span style='font-size: 60px; color: #3A96DD;'>{st.session_state.SCORE}</span>.", header_size=1)
+        write_text(f"Score: <span style='font-size: 60px; color: #3A96DD;'>{st.session_state.SCORE}</span>", header_size=1)
 
 def submit():
     st.session_state.spell = st.session_state.spell_widget
