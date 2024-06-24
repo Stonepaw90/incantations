@@ -90,12 +90,12 @@ class Tiles:
         self.display(letters = sorted(self.Tiles))
 
     def display(self, letters):
-        cols = st.columns(11)
+        cols = st.columns(3)
         for i in range(min(11, len(letters))):
             upper_letter = str.upper(letters[i])
             if upper_letter in ["A", "E", "I", "O", "U"]:
                 upper_letter = blue_bold(upper_letter)
-            with cols[i]:
+            with cols[i%3]:
                 write_text(upper_letter)
 
     def check_spell(self, spell):
